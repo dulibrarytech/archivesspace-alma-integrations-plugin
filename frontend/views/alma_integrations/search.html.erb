@@ -1,0 +1,23 @@
+<%= setup_context :title => "#{I18n.t("plugins.alma_integrations.record_types.#{@results['record_type']}")} for #{@results['id']} #{@results['title']}", :trail => [[I18n.t("plugins.alma_integrations.title"), {:controller => :alma_integrations, :action => :index}]] %>
+
+<% results = @results['results'] %>
+
+<div class="record-pane">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render_aspace_partial :partial => "shared/flash_messages" %>
+      <h2><%= I18n.t("plugins.alma_integrations.title") %></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= render_aspace_partial :partial => "search_#{@results['record_type']}", :locals => {:results => results} %>
+    </div>
+  </div>
+
+  <%= render_aspace_partial :partial => "form" %>
+</div>
+
+<script src="<%= "#{AppConfig[:frontend_prefix]}assets/alma_integrations.js" %>"></script>
+<link rel="stylesheet" type="text/css" href="<%= "#{AppConfig[:frontend_prefix]}assets/alma_integrations.css" %>"/>

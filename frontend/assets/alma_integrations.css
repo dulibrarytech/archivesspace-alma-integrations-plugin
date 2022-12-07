@@ -1,0 +1,31 @@
+.pagination > li > button {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #337ab7;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+}
+
+.pagination > li > button:hover,
+.pagination > li > button:focus {
+  color: darken(#337ab7, 15%);
+  background-color: #eee;
+  border-color: #ddd;
+}
+
+.pagination-sm > li > button {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.search-success {
+  color: #155724;
+}
+
+.search-error {
+  color: #721c24;
+}
